@@ -97,11 +97,23 @@
         transform-origin: left;
       }
 
+      @media (max-width: 450px) {
+        /* Increase padding for the form section */
+        .form-section {
+          padding: 2rem;
+        }
+
+        /* Increase padding for the 'where to find us' section */
+        .where-to-find-us {
+          padding: 2rem;
+        }
+      }
+
       /* Responsive hero padding and text padding */
       @media (max-width: 640px) {
         .hero-padding {
-          padding-top: 5rem; /* Reduced height for mobile */
-          padding-bottom: 5rem; /* Reduced height for mobile */
+          padding-top: 5rem;
+          padding-bottom: 5rem;
         }
         .text-padding {
           padding: 0 1rem; /* Adds padding to the text */
@@ -123,8 +135,8 @@
 
       @media (min-width: 769px) and (max-width: 1024px) {
         .px-md-8 {
-          padding-left: 3rem; /* Increased padding */
-          padding-right: 3rem; /* Increased padding */
+          padding-left: 3rem;
+          padding-right: 3rem;
         }
 
         .fancy-link {
@@ -157,7 +169,9 @@
           <div class="flex flex-wrap -mx-2">
             <!-- Updated: Removed one layer of div here -->
             <div class="w-full md:w-1/2 px-4 mb-4 md:mb-0">
-              <div class="bg-white rounded-lg overflow-hidden shadow-lg p-6">
+              <div
+                class="where-to-find-us bg-white rounded-lg overflow-hidden shadow-lg p-6"
+              >
                 <h2 class="text-2xl font-bold mb-4">Where to find us:</h2>
                 <p class="mb-4"><strong>In California</strong></p>
                 <div class="mb-4">
