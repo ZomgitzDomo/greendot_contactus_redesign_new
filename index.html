@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <style>
+      #header-h1 {
+        color: #68d206;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        text-transform: none;
+      }
+      .green-dot-color {
+        color: #68d206;
+      }
+      .w-full .bg-white div p {
+        font-weight: 200 !important;
+      }
+      button.btn-green,
+      .btn-green[type="button"] {
+        background-color: #68d206;
+        transition: background-color 0.3s, padding-right 0.3s;
+        padding: 20px 40px;
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+      button.btn-green:hover,
+      .btn-green[type="button"]:hover {
+        background-color: #2cad00;
+        padding-right: 60px;
+      }
+      button.btn-green .fl-button-icon,
+      .btn-green[type="button"] .fl-button-icon {
+        position: absolute;
+        right: -30px;
+        transition: right 0.3s;
+        opacity: 0;
+      }
+      button.btn-green:hover .fl-button-icon,
+      .btn-green[type="button"]:hover .fl-button-icon {
+        right: 20px;
+        opacity: 1;
+      }
+      .form-section input:focus,
+      .form-section textarea:focus {
+        outline: 2px solid #68d206;
+        outline-offset: 2px;
+      }
+      .form-section input,
+      .form-section textarea {
+        border: 2px solid #ddd;
+        padding: 0.5rem;
+        border-radius: 0.375rem;
+      }
+      .form-section label {
+        color: #000;
+      }
+
+      .fancy-link {
+        text-decoration: none;
+        color: #68d206;
+        position: relative;
+        white-space: nowrap;
+        font-size: 0.9em;
+      }
+
+      .fancy-link::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background: currentColor;
+
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 250ms ease-in;
+      }
+
+      .fancy-link:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+
+      /* Responsive hero padding and text padding */
+      @media (max-width: 640px) {
+        .hero-padding {
+          padding-top: 5rem; /* Reduced height for mobile */
+          padding-bottom: 5rem; /* Reduced height for mobile */
+        }
+        .text-padding {
+          padding: 0 1rem; /* Adds padding to the text */
+        }
+      }
+
+      /* to adjust 2 column layout for tablet sizes */
+      /* Adjusting for tablet and wider screens */
+      @media (max-width: 768px) {
+        .px-md-8 {
+          padding-left: 2rem; /* 8px in Tailwind */
+          padding-right: 2rem; /* 8px in Tailwind */
+        }
+
+        .fancy-link {
+          font-size: 0.7em;
+        }
+      }
+
+      @media (min-width: 769px) and (max-width: 1024px) {
+        .px-md-8 {
+          padding-left: 3rem; /* Increased padding */
+          padding-right: 3rem; /* Increased padding */
+        }
+
+        .fancy-link {
+          font-size: 0.7em;
+        }
+      }
+    </style>
+  </head>
+  <body class="font-sans leading-normal tracking-normal">
+    <header
+      class="text-center bg-cover bg-center py-40 relative"
+      style="
+        background-image: url('https://greendot.wpengine.com/wp-content/uploads/2015/11/about-us.jpg');
+      "
+    >
+      <div
+        class="bg-black bg-opacity-50 absolute inset-0 flex flex-col justify-center items-center hero-padding"
+      >
+        <h1 class="text-6xl font-bold mb-4" id="header-h1">Contact Us</h1>
+        <p class="text-white text-padding">
+          Please do not hesitate to reach out so we can answer any questions or
+          concerns you may have. You may reach us at:
+        </p>
+      </div>
+    </header>
+
+    <div class="container mx-auto px-6 py-8">
+      <section class="mb-8">
+        <div class="max-w-4xl mx-auto px-4">
+          <div class="flex flex-wrap -mx-2">
+            <!-- Updated: Removed one layer of div here -->
+            <div class="w-full md:w-1/2 px-4 mb-4 md:mb-0">
+              <div class="bg-white rounded-lg overflow-hidden shadow-lg p-6">
+                <h2 class="text-2xl font-bold mb-4">Where to find us:</h2>
+                <p class="mb-4"><strong>In California</strong></p>
+                <div class="mb-4">
+                  <p>
+                    Cristina de Jesus, CEO & President<br />
+                    Green Dot Public Schools - California<br />
+                    1149 S. Hill St, Ste. 600<br />
+                    Los Angeles, CA<br />
+                  </p>
+                </div>
+                <div class="mb-4">
+                  <strong>Telephone</strong>
+                  <p>(323) 565-1600</p>
+                </div>
+                <div class="mb-4">
+                  <strong>Email</strong>
+                  <p>info@greendot.org</p>
+                </div>
+                <a
+                  href="#"
+                  class="green-dot-color hover:underline mb-4 fancy-link"
+                  >Basic Directions</a
+                >
+                <hr class="mb-4" />
+                <div class="mb-4">
+                  <strong>Green Dot Public Schools National</strong>
+                  <p>
+                    11341 National Blvd #1062<br />
+                    Los Angeles, CA 90064<br />
+                  </p>
+                </div>
+                <div class="mb-4">
+                  <strong>Email</strong>
+                  <p>info@greendot.org</p>
+                </div>
+                <a
+                  href="#"
+                  class="fancy-link"
+                  title="For media inquiries, please contact our team directly."
+                >
+                  For media inquiries, please contact our team directly.
+                </a>
+              </div>
+            </div>
+
+            <!-- Form Section -->
+            <div class="w-full md:w-1/2 px-4">
+              <div
+                class="form-section bg-white rounded-lg overflow-hidden shadow-lg p-6"
+              >
+                <h2 class="text-2xl font-bold mb-4">Send us a message</h2>
+                <form>
+                  <div class="mb-4">
+                    <label
+                      for="name"
+                      class="block text-gray-700 text-sm font-bold mb-2"
+                      >Name*</label
+                    >
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      placeholder="Your Name"
+                      required
+                      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    />
+                  </div>
+                  <div class="mb-4">
+                    <label
+                      for="email"
+                      class="block text-gray-700 text-sm font-bold mb-2"
+                      >Email*</label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="Your Email"
+                      required
+                      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    />
+                  </div>
+                  <div class="mb-6">
+                    <label
+                      for="message"
+                      class="block text-gray-700 text-sm font-bold mb-2"
+                      >Message*</label
+                    >
+                    <textarea
+                      id="message"
+                      name="message"
+                      placeholder="Your Message"
+                      required
+                      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline h-32"
+                    ></textarea>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <button
+                      type="button"
+                      class="btn-green text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    >
+                      Send
+                      <i
+                        class="fl-button-icon fl-button-icon-after fa fa-angle-double-right"
+                        aria-hidden="true"
+                      ></i>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-8">
+        <div
+          class="overflow-hidden"
+          style="position: relative; height: 0; padding-bottom: 28.25%"
+        >
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3306.182781463084!2d-118.26387102483547!3d34.03918217316192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c7b28f6687d1%3A0x87ce2de66092d5b8!2sGreen%20Dot%20Public%20Schools!5e0!3m2!1sen!2sus!4v1707181947905!5m2!1sen!2sus"
+            frameborder="0"
+            style="
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              border: 0;
+            "
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </section>
+
+      <!-- Footer if you have one -->
+    </div>
+  </body>
+</html>
